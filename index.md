@@ -21,8 +21,50 @@
 
 # 安装bxc#
 	
+输入命令创建bxc目录并切换到该目录：
+
+	mkdir bxc && cd bxc 
+下载bxc-wifi脚本
+
+	wget https://github.com/ytyw/Auto-bxc/blob/b18c1d45d19a7474b028a69f66d0e4b1a3e5ca6c/bxc.sh
+
+赋予x权限
+
+	chmod +x bxc.sh
+
+安装并初始化博纳云客户端，初始化结束会提示输入Email和Bcode绑定设备。	
 	
+	./bxc.sh init
+
+启动/关闭bxc脚本
+
+	/root/bxc/bxc.sh start			启动脚本
+	/root/bxc/bxc.sh stop			关闭脚本
+
+开机自动/禁止后台启动
+	
+	./bxc.sh enable 	开启开机启动
+	./bxc.sh disable	禁止开机启动
+
+重启
+
+	reboot
+	
+查看是bxc是否启动
+	
+	ps -u root
+
+查看列表中是否有bxc-nwtwork bxc-worker 两个进程
+
+	///////////
+		...
+	bxc-nwtwork   
+	bxc-worker
+		...
+	//////////
+
 ##固定Mac##
+
 *我发现很多人在重启后发现bxc会掉线，自己也是在掉线2天后跟群友讨论研究后找到了解决方法，主要是由于重启后mac发现了变化于是需要手动固定mac*
 -----
 	vi /etc/network/interfaces

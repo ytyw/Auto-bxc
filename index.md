@@ -1,7 +1,7 @@
 # N1-bxc-Wifi #
 感谢各路大神提供的方案我只是做了一个小小的改动
 ## v1.0 ##
-1. 修改bxc使用wifi绑定Mac的脚本下载地址：
+1. 修改bxc使用wifi绑定Mac的脚本下载地址：https://github.com/ytyw/Auto-bxc/blob/b18c1d45d19a7474b028a69f66d0e4b1a3e5ca6c/bxc.sh
 
 
 使用方法：

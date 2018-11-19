@@ -92,7 +92,7 @@
 	# 
 	#allow-hotplug wlan0    #//如果你是挂的无线Mac 上面的mac就不用加 去掉这行的#号
 	#iface wlan0 inet dhcp	 #//如果你是挂的无线Mac地址去掉这行的#号
-	#pre-up ifconfig eth0 hw wlan0 aa:bb:cc:dd:ee:ff  #//这行添加你无线wlan0绑定Mac（aa:bb:cc:dd:ee:ff换成bxc网站上绑定好） 需要去掉#
+	#pre-up ifconfig wlan0 hw ether aa:bb:cc:dd:ee:ff  #//这行添加你无线wlan0绑定Mac（aa:bb:cc:dd:ee:ff换成bxc网站上绑定好） 需要去掉#
 	#address 192.168.0.100
 	#netmask 255.255.255.0
 	#gateway 192.168.0.1

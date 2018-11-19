@@ -9,6 +9,7 @@
 **加载启用无线模块** 
 
 	modprobe dhd && echo dhd >> /etc/modules
+
 **启用图形化界面 **
 
 	armbian-config					

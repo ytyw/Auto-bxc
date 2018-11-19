@@ -57,24 +57,26 @@
 查看列表中是否有bxc-nwtwork bxc-worker 两个进程
 
 	///////////
-		...
+	  ...
 	bxc-nwtwork   
 	bxc-worker
-		...
+	  ...
 	//////////
 
-##固定Mac##
+# 固定Mac #
 
 *我发现很多人在重启后发现bxc会掉线，自己也是在掉线2天后跟群友讨论研究后找到了解决方法，主要是由于重启后mac发现了变化于是需要手动固定mac*
+
 -----
 	vi /etc/network/interfaces
 	i    //按下i对文档进行编辑 
+
 	////////////////////////////////////////////////
 	# Wired adapter #1
 	allow-hotplug eth0
 	no-auto-down eth0
 	iface eth0 inet dhcp
-	pre-up ifconfig eth0 hw ether aa:bb:cc:dd:ee:ff  #//添加这行是你的有线eth0绑定Mac
+	pre-up ifconfig eth0 hw ether aa:bb:cc:dd:ee:ff  #//添加这行是你的有线eth0绑定Mac （aa:bb:cc:dd:ee:ff换成bxc网站上绑定好）  
 	#address 192.168.0.100
 	#netmask 255.255.255.0
 	#gateway 192.168.0.1
@@ -90,7 +92,7 @@
 	# 
 	#allow-hotplug wlan0          	#//如果你是挂的无线Mac去掉这行的#号
 	#iface wlan0 inet dhcp			#//如果你是挂的无线Mac地址去掉这行的#号
-	#pre-up ifconfig eth0 hw wlan0 aa:bb:cc:dd:ee:ff  #//这行添加你无线wlan0绑定Mac也需要去掉#
+	#pre-up ifconfig eth0 hw wlan0 aa:bb:cc:dd:ee:ff  #//这行添加你无线wlan0绑定Mac（aa:bb:cc:dd:ee:ff换成bxc网站上绑定好） 需要去掉#
 	#address 192.168.0.100
 	#netmask 255.255.255.0
 	#gateway 192.168.0.1
@@ -102,7 +104,9 @@
 	////////////////////////////////////////////////
 	
 **编辑完成后按下 【Esc】键  继续输入 【：wq】 保存并退出编辑状态**
+	
 	apt-get install net-tools        //安装查询工具
 	ifconfig -a  	//如果你连上了网就能看到mac地址了
+
 然后reboot 重启 
 输入账号和密码后再次 ifconfig -a 查看你修改后的mac是成功

@@ -14,7 +14,7 @@
 
 	modprobe dhd && echo dhd >> /etc/modules
 
-**启用图形化界面 **
+**启用图形化界面**
 
 	armbian-config					
 
@@ -30,7 +30,7 @@
 	mkdir bxc && cd bxc 
 下载bxc-wifi脚本
 
-	wget https://github.com/ytyw/Auto-bxc/blob/b18c1d45d19a7474b028a69f66d0e4b1a3e5ca6c/bxc.sh
+	wget https://github.com/ytyw/Auto-bxc/blob/master/bxc.sh
 
 赋予x权限
 

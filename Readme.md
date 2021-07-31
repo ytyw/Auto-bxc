@@ -36,7 +36,7 @@
 
 	chmod +x bxc.sh
 
-安装并初始化博纳云客户端，初始化结束会提示输入Email和Bcode绑定设备。	
+安装并初始化博纳云客户端，初始化结束会提示输入Email和Bcode绑定设备。	 <博纳云官网>邮箱注册抢激活码  https://console.bonuscloud.io/login
 	
 	./bxc.sh init
 
